@@ -1,8 +1,3 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
 local KittyHub = Instance.new("ScreenGui")
 local Main = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -11,6 +6,8 @@ local DIscordInvite = Instance.new("ImageButton")
 local Home_2 = Instance.new("Frame")
 local Close = Instance.new("TextButton")
 local UICorner_2 = Instance.new("UICorner")
+local FPS = Instance.new("TextLabel")
+local UICorner_3 = Instance.new("UICorner")
 
 --Properties:
 
@@ -63,9 +60,23 @@ Close.TextWrapped = true
 
 UICorner_2.Parent = Close
 
+FPS.Name = "FPS"
+FPS.Parent = KittyHub
+FPS.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+FPS.Position = UDim2.new(0.0670000017, 0, -0.0419999994, 0)
+FPS.Size = UDim2.new(0.117739402, 0, 0.0364077687, 0)
+FPS.Font = Enum.Font.GothamBold
+FPS.Text = "FPS:"
+FPS.TextColor3 = Color3.fromRGB(255, 255, 255)
+FPS.TextScaled = true
+FPS.TextSize = 14.000
+FPS.TextWrapped = true
+
+UICorner_3.Parent = FPS
+
 -- Scripts:
 
-local function YCZM_fake_script() -- Home.LoadHome 
+local function JOCSMN_fake_script() -- Home.LoadHome 
 	local script = Instance.new('LocalScript', Home)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -82,12 +93,30 @@ local function YCZM_fake_script() -- Home.LoadHome
 		script.Parent.Parent.Visible = true
 	end)
 end
-coroutine.wrap(YCZM_fake_script)()
-local function SWDUZI_fake_script() -- DIscordInvite.Invite 
+coroutine.wrap(JOCSMN_fake_script)()
+local function EVCDT_fake_script() -- DIscordInvite.Invite 
 	local script = Instance.new('Script', DIscordInvite)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		print("https://discord.gg/NvqVhGwgJj")
 	end)
 end
-coroutine.wrap(SWDUZI_fake_script)()
+coroutine.wrap(EVCDT_fake_script)()
+local function PYXT_fake_script() -- FPS.LocalScript 
+	local script = Instance.new('LocalScript', FPS)
+
+	local fps = 0
+	local rs = game:GetService'RunService'
+	
+	function updateFPS()
+		fps = fps + 1
+	end
+	
+	rs.RenderStepped:connect(updateFPS)
+	
+	while wait(1) do
+		script.Parent.Text = "FPS: "..fps
+		fps = 0
+	end
+end
+coroutine.wrap(PYXT_fake_script)()
