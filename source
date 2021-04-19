@@ -1,6 +1,6 @@
 local KittyHub = Instance.new("ScreenGui")
 local Welcome = Instance.new("Frame")
-local ElcomeText = Instance.new("TextLabel")
+local WelcomeText = Instance.new("TextLabel")
 local UICorner = Instance.new("UICorner")
 local Buttons = Instance.new("Frame")
 local Home = Instance.new("ImageButton")
@@ -21,17 +21,17 @@ Welcome.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
 Welcome.Position = UDim2.new(0.402638197, 0, 0.00728155347, 0)
 Welcome.Size = UDim2.new(0.194723621, 0, 0.0449029133, 0)
 
-ElcomeText.Name = "ElcomeText"
-ElcomeText.Parent = Welcome
-ElcomeText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ElcomeText.BackgroundTransparency = 1.000
-ElcomeText.Size = UDim2.new(1, 0, 1, 0)
-ElcomeText.Font = Enum.Font.GothamBlack
-ElcomeText.Text = "Welcome to KittyHub,"
-ElcomeText.TextColor3 = Color3.fromRGB(0, 0, 0)
-ElcomeText.TextScaled = true
-ElcomeText.TextSize = 14.000
-ElcomeText.TextWrapped = true
+WelcomeText.Name = "WelcomeText"
+WelcomeText.Parent = Welcome
+WelcomeText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WelcomeText.BackgroundTransparency = 1.000
+WelcomeText.Size = UDim2.new(1, 0, 1, 0)
+WelcomeText.Font = Enum.Font.GothamBlack
+WelcomeText.Text = "Welcome to KittyHub,"
+WelcomeText.TextColor3 = Color3.fromRGB(0, 0, 0)
+WelcomeText.TextScaled = true
+WelcomeText.TextSize = 14.000
+WelcomeText.TextWrapped = true
 
 UICorner.Parent = Welcome
 
@@ -82,22 +82,22 @@ UICorner_3.Parent = Close
 
 -- Scripts:
 
-local function CDCEY_fake_script()
-	local script = Instance.new('LocalScript', ElcomeText)
+local function KIDPK_fake_script() -- WelcomeText.Load 
+	local script = Instance.new('LocalScript', WelcomeText)
 
 	script.Parent.Text = "Welcome to KittyHub, ".. game.Players.LocalPlayer.Name
 	wait(2.5)
 	script.Parent.Parent.Visible = false
 end
-coroutine.wrap(CDCEY_fake_script)()
-local function NOPDP_fake_script()
+coroutine.wrap(KIDPK_fake_script)()
+local function ZPUXIBK_fake_script() -- Buttons.Load 
 	local script = Instance.new('LocalScript', Buttons)
 
 	wait(2.5)
 	script.Parent.Visible = true
 end
-coroutine.wrap(NOPDP_fake_script)()
-local function ODUHU_fake_script() 
+coroutine.wrap(ZPUXIBK_fake_script)()
+local function MFOIEM_fake_script() -- Home.LoadHome 
 	local script = Instance.new('LocalScript', Home)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -112,12 +112,12 @@ local function ODUHU_fake_script()
 		game.Workspace.CurrentCamera.FieldOfView = 70
 	end)
 end
-coroutine.wrap(ODUHU_fake_script)()
-local function MYATR_fake_script()
+coroutine.wrap(MFOIEM_fake_script)()
+local function PAQA_fake_script() -- DiscordInvite.Invite 
 	local script = Instance.new('LocalScript', DiscordInvite)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		print("https://discord.gg/NvqVhGwgJj")
 	end)
 end
-coroutine.wrap(MYATR_fake_script)()
+coroutine.wrap(PAQA_fake_script)()
