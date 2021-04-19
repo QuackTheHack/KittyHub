@@ -3,13 +3,20 @@ local Main = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
 local Home = Instance.new("ImageButton")
 local DIscordInvite = Instance.new("ImageButton")
+local Info = Instance.new("ImageButton")
 local Home_2 = Instance.new("Frame")
 local Close = Instance.new("TextButton")
 local UICorner_2 = Instance.new("UICorner")
 local FPS = Instance.new("TextLabel")
 local UICorner_3 = Instance.new("UICorner")
-
---Properties:
+local Info_2 = Instance.new("Frame")
+local InfoScroll = Instance.new("ScrollingFrame")
+local Credits = Instance.new("TextLabel")
+local DIscordInfo = Instance.new("TextLabel")
+local HelpInfo = Instance.new("TextLabel")
+local UICorner_4 = Instance.new("UICorner")
+local Close_2 = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
 
 KittyHub.Name = "KittyHub"
 KittyHub.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -39,6 +46,14 @@ DIscordInvite.Position = UDim2.new(0.183069199, 0, 0.10404627, 0)
 DIscordInvite.Size = UDim2.new(0.628140688, 0, 0.0866851583, 0)
 DIscordInvite.Image = "rbxassetid://446181522"
 
+Info.Name = "Info"
+Info.Parent = Main
+Info.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Info.BackgroundTransparency = 1.000
+Info.Position = UDim2.new(0.175879478, 0, 0.894590855, 0)
+Info.Size = UDim2.new(0, 50, 0, 50)
+Info.Image = "http://www.roblox.com/asset/?id=238316630"
+
 Home_2.Name = "Home"
 Home_2.Parent = KittyHub
 Home_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -63,7 +78,7 @@ UICorner_2.Parent = Close
 FPS.Name = "FPS"
 FPS.Parent = KittyHub
 FPS.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
-FPS.Position = UDim2.new(0.0670000017, 0, -0.0419999994, 0)
+FPS.Position = UDim2.new(0.0700000003, 0, -0.0419999994, 0)
 FPS.Size = UDim2.new(0.117739402, 0, 0.0364077687, 0)
 FPS.Font = Enum.Font.GothamBold
 FPS.Text = "FPS:"
@@ -74,9 +89,77 @@ FPS.TextWrapped = true
 
 UICorner_3.Parent = FPS
 
--- Scripts:
+Info_2.Name = "Info"
+Info_2.Parent = KittyHub
+Info_2.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Info_2.Position = UDim2.new(0.755653262, 0, 0.149271846, 0)
+Info_2.Size = UDim2.new(0.168969855, 0, 0.699029148, 0)
+Info_2.Visible = false
 
-local function JOCSMN_fake_script() -- Home.LoadHome 
+InfoScroll.Name = "InfoScroll"
+InfoScroll.Parent = Info_2
+InfoScroll.Active = true
+InfoScroll.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+InfoScroll.BackgroundTransparency = 1.000
+InfoScroll.Size = UDim2.new(1, 0, 1, 0)
+
+Credits.Name = "Credits"
+Credits.Parent = InfoScroll
+Credits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Credits.BackgroundTransparency = 1.000
+Credits.Position = UDim2.new(0, 0, 0.013888889, 0)
+Credits.Size = UDim2.new(0.955390334, 0, 0.0798611119, 0)
+Credits.Font = Enum.Font.GothamBold
+Credits.Text = "Credits: KittyCatDev#6381"
+Credits.TextColor3 = Color3.fromRGB(0, 0, 0)
+Credits.TextScaled = true
+Credits.TextSize = 14.000
+Credits.TextWrapped = true
+
+DIscordInfo.Name = "DIscordInfo"
+DIscordInfo.Parent = InfoScroll
+DIscordInfo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DIscordInfo.BackgroundTransparency = 1.000
+DIscordInfo.Position = UDim2.new(0, 0, 0.09375, 0)
+DIscordInfo.Size = UDim2.new(0.955390334, 0, 0.0798611119, 0)
+DIscordInfo.Font = Enum.Font.GothamBold
+DIscordInfo.Text = "When pressed the discord button press F9"
+DIscordInfo.TextColor3 = Color3.fromRGB(0, 0, 0)
+DIscordInfo.TextScaled = true
+DIscordInfo.TextSize = 14.000
+DIscordInfo.TextWrapped = true
+
+HelpInfo.Name = "HelpInfo"
+HelpInfo.Parent = InfoScroll
+HelpInfo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+HelpInfo.BackgroundTransparency = 1.000
+HelpInfo.Position = UDim2.new(0, 0, 0.190972209, 0)
+HelpInfo.Size = UDim2.new(0.955390334, 0, 0.0798611119, 0)
+HelpInfo.Font = Enum.Font.GothamBold
+HelpInfo.Text = "Need help? Join the discord server or add me to DM!"
+HelpInfo.TextColor3 = Color3.fromRGB(0, 0, 0)
+HelpInfo.TextScaled = true
+HelpInfo.TextSize = 14.000
+HelpInfo.TextWrapped = true
+
+UICorner_4.Parent = Info_2
+
+Close_2.Name = "Close"
+Close_2.Parent = Info_2
+Close_2.BackgroundColor3 = Color3.fromRGB(25, 25, 35)
+Close_2.BorderColor3 = Color3.fromRGB(25, 25, 52)
+Close_2.Position = UDim2.new(0, 0, 0.913194418, 0)
+Close_2.Size = UDim2.new(0, 269, 0, 50)
+Close_2.Font = Enum.Font.GothamBold
+Close_2.Text = "Close"
+Close_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Close_2.TextScaled = true
+Close_2.TextSize = 14.000
+Close_2.TextWrapped = true
+
+UICorner_5.Parent = Close_2
+
+local function LHXS_fake_script() 
 	local script = Instance.new('LocalScript', Home)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -93,16 +176,28 @@ local function JOCSMN_fake_script() -- Home.LoadHome
 		script.Parent.Parent.Visible = true
 	end)
 end
-coroutine.wrap(JOCSMN_fake_script)()
-local function EVCDT_fake_script() -- DIscordInvite.Invite 
+coroutine.wrap(LHXS_fake_script)()
+local function MIJONGJ_fake_script()
 	local script = Instance.new('Script', DIscordInvite)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		print("https://discord.gg/NvqVhGwgJj")
 	end)
 end
-coroutine.wrap(EVCDT_fake_script)()
-local function PYXT_fake_script() -- FPS.LocalScript 
+coroutine.wrap(MIJONGJ_fake_script)()
+local function EDFZIPX_fake_script()
+	local script = Instance.new('LocalScript', Info)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Info.Visible = true
+	end)
+	
+	script.Parent.Parent.Parent.Info.Close.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Info.Visible = false
+	end)
+end
+coroutine.wrap(EDFZIPX_fake_script)()
+local function QHLAG_fake_script() 
 	local script = Instance.new('LocalScript', FPS)
 
 	local fps = 0
@@ -119,4 +214,4 @@ local function PYXT_fake_script() -- FPS.LocalScript
 		fps = 0
 	end
 end
-coroutine.wrap(PYXT_fake_script)()
+coroutine.wrap(QHLAG_fake_script)()
