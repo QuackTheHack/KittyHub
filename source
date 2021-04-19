@@ -1,3 +1,8 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
 local KittyHub = Instance.new("ScreenGui")
 local Welcome = Instance.new("Frame")
 local WelcomeText = Instance.new("TextLabel")
@@ -82,22 +87,22 @@ UICorner_3.Parent = Close
 
 -- Scripts:
 
-local function KIDPK_fake_script() -- WelcomeText.Load 
+local function PTNKVZ_fake_script() -- WelcomeText.Load 
 	local script = Instance.new('LocalScript', WelcomeText)
 
 	script.Parent.Text = "Welcome to KittyHub, ".. game.Players.LocalPlayer.Name
 	wait(2.5)
 	script.Parent.Parent.Visible = false
 end
-coroutine.wrap(KIDPK_fake_script)()
-local function ZPUXIBK_fake_script() -- Buttons.Load 
+coroutine.wrap(PTNKVZ_fake_script)()
+local function ELXS_fake_script() -- Buttons.Load 
 	local script = Instance.new('LocalScript', Buttons)
 
 	wait(2.5)
 	script.Parent.Visible = true
 end
-coroutine.wrap(ZPUXIBK_fake_script)()
-local function MFOIEM_fake_script() -- Home.LoadHome 
+coroutine.wrap(ELXS_fake_script)()
+local function PLZC_fake_script() -- Home.LoadHome 
 	local script = Instance.new('LocalScript', Home)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -112,12 +117,12 @@ local function MFOIEM_fake_script() -- Home.LoadHome
 		game.Workspace.CurrentCamera.FieldOfView = 70
 	end)
 end
-coroutine.wrap(MFOIEM_fake_script)()
-local function PAQA_fake_script() -- DiscordInvite.Invite 
+coroutine.wrap(PLZC_fake_script)()
+local function KQVOHAD_fake_script() -- DiscordInvite.Invite 
 	local script = Instance.new('LocalScript', DiscordInvite)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		print("https://discord.gg/NvqVhGwgJj")
 	end)
 end
-coroutine.wrap(PAQA_fake_script)()
+coroutine.wrap(KQVOHAD_fake_script)()
